@@ -1,0 +1,235 @@
+/* ~~ RESET ~~ */
+@import url("reset.css");
+@import url("fonts.css");
+
+/* ~~ REUSABLE ~~ */
+input{
+    vertical-align: baseline;
+}
+
+.float-right{
+    float:right;
+}
+
+h2 {
+    text-shadow: #2b0100 2px 2px 0px;
+    font-size:32px;
+    color: #fff;
+    font-weight:400;
+    text-align: center;
+    margin: 40px 0px 20px;
+}
+
+/* ~~ LAYOUT ~~ */
+
+html{
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;    
+}
+*{
+    font: inherit;
+}
+
+body {
+    background-image: url("../img/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font: 400 16px titillium, sans-serif;  
+}
+
+/* ~~ HEADER - LOGO ~~ */
+.header{
+    margin-top:55px;
+}
+.header__logo{
+    width:429px;
+    height:111px;
+    display: block;
+    margin: 0px auto;
+    opacity:.2;    
+}
+
+/* ~~ MAIN ~~ */
+.main {
+    width:1000px;
+    margin:0px auto;
+    margin-top:13px;
+    display:flex;
+    justify-content: space-around;    
+}
+.main__column{
+    padding:0px 40px;
+    flex:1;
+}
+/* ~~ FORM ~~ */
+.form-container{
+    background-color: rgba(0,0,0, .23);
+    padding:20px;
+    border-radius: 4px;
+}
+.form {
+    background:#f4f4f4;
+    border-radius:4px;
+    padding:20px;
+}
+
+.text, .password, .email, .tel, .select, .textarea {
+    width:100%;
+    height:40px; 
+    border: 1px solid #c6c6c6; 
+    border-radius:3px;
+    margin-bottom:20px;
+    padding-left: 80px;
+    color:#a3a3a3;   
+    transition: border-color ease 0.3s;    
+}
+
+input:focus, .select:focus, .textarea:focus{
+    border-color:#a3a3a3;
+    outline:none;
+}
+
+input::-webkit-input-placeholder,
+.textarea::-webkit-input-placeholder {
+    color: #afafaf;
+    opacity: 1;
+}
+input:-moz-placeholder,
+.textarea:-moz-placeholder {
+    color: #afafaf;
+    opacity: 1;
+}
+input::-moz-placeholder,
+.textarea::-moz-placeholder {
+    color: #afafaf;
+    opacity: 1;
+}
+input:-ms-input-placeholder,
+.textarea:-ms-input-placeholder {
+    color: #afafaf;
+    opacity: 1;
+}
+
+.select{
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.option{
+    background: #F4F4F4;
+}
+
+.checkbox{
+    opacity:0;
+    margin-bottom:20px;
+}
+.label--checkbox{    
+    font-size:16px;
+    font-weight:200;
+    color: #afafaf;
+    position:relative;
+    cursor: pointer;
+}
+.label--checkbox::before{
+    content: "";
+    display:inline-block;
+    border:1px solid #afafaf;
+    border-radius: 3px;
+    height: 24px;
+    width: 24px;
+    position:absolute;
+    left:-23px;
+}
+.label--checkbox::after{
+    content:none;
+}
+.checkbox:checked + .label--checkbox::after{
+    content:"";
+    width:12px;
+    height:12px;
+    border-radius: 3px;
+    background: linear-gradient(#a3d740, #7fc41f);
+    position:absolute;
+    left: -17px;
+    top: 5px;
+} 
+.checkbox:focus+.label--checkbox:before{
+    border:1px solid hsl(0, 0%, 59%);
+}
+.label--checkbox__span{
+    padding-left:15px;
+}
+
+.form--sign-in .label--checkbox {line-height:40px;}
+.form--sign-in .label--checkbox::before {
+    top:0px;
+}
+.form--sign-in .checkbox:checked + .label--checkbox::after{
+    top: 6px;
+}
+
+.submit{
+    width:100%;
+    height:46px;
+    border: 1px solid #3a9a00;
+    border-radius:3px;
+    font-size: 24px;
+    color: #fff;
+    text-shadow: 1px 1px 0px #51850e;
+    background: linear-gradient(#a3d740, #7fc41f);
+    background-size: 200% auto;
+    background-position: 0 100%;
+    cursor: pointer;
+    transition: background-position ease 0.5s;
+}
+
+.submit:hover:enabled{
+    background-position: 0 0;
+    /* background: linear-gradient(#98d22c, #72b01b); */
+}
+
+.textarea{
+    height: 230px;
+    text-align:left;
+    padding:10px 15px; 
+    background: linear-gradient(#f6f6f6, #f0f0f0);
+}
+
+.submit--inactive{
+    background: linear-gradient(hsl(81, 65%, 85%), hsl(85, 73%, 75%));
+    cursor: not-allowed;
+}
+
+.submit--small {
+    width:40%;
+    font-size:22px;
+    height:40px;
+}
+
+.submit--right{
+    float:right;
+}
+.submit--discard{
+    background: linear-gradient(#f65e70, #f03747);  
+    transition: background-position ease 0.5s;  
+}
+.submit--discard:hover:enabled{
+    background: linear-gradient(hsl(353, 89%, 62%), hsl(355, 86%, 53%));  
+}
+.logo-bottom__img {
+    width:355px;
+    height:130px;
+    display: block;
+    margin: 50px auto 0px;
+    opacity:.3;
+}
+.text{background: url("../img/username_icon.png") top left no-repeat, linear-gradient(#f6f6f6, #f0f0f0); }
+.password{background: url("../img/password_icon.png") top left no-repeat, linear-gradient(#f6f6f6, #f0f0f0);}
+.email{background: url("../img/email_icon.png") top left no-repeat, linear-gradient(#f6f6f6, #f0f0f0);}
+.select{background: url("../img/location_icon.png") top left no-repeat, url("../img/select_arrow.png") right 12px center no-repeat, linear-gradient(#f6f6f6, #f0f0f0);}
+.tel{background: url("../img/phone_icon.png") top left no-repeat, linear-gradient(#f6f6f6, #f0f0f0);}
