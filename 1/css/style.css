@@ -21,6 +21,11 @@ h2 {
 }
 
 /* ~~ LAYOUT ~~ */
+html,
+body{
+  width:100%;
+  overflow-x:hidden;
+}
 
 html{
     box-sizing: border-box;
@@ -221,7 +226,7 @@ input:-ms-input-placeholder,
     width:355px;
     height:130px;
     display: block;
-    margin: 50px auto 0px;
+    margin: 50px auto 20px;
     opacity:.3;
 }
 .text{background: url("../img/username_icon.png") top left no-repeat, linear-gradient(#f6f6f6, #f0f0f0); }
