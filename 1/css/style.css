@@ -139,6 +139,7 @@ input:-ms-input-placeholder,
     color: #afafaf;
     position:relative;
     cursor: pointer;
+    line-height:25px;
 }
 .label--checkbox::before{
     content: "";
@@ -149,6 +150,7 @@ input:-ms-input-placeholder,
     width: 24px;
     position:absolute;
     left:-23px;
+    top: 0px;
 }
 .label--checkbox::after{
     content:none;
@@ -161,7 +163,7 @@ input:-ms-input-placeholder,
     background: linear-gradient(#a3d740, #7fc41f);
     position:absolute;
     left: -17px;
-    top: 5px;
+    top: 6px;
 } 
 .checkbox:focus+.label--checkbox:before{
     border:1px solid hsl(0, 0%, 59%);
@@ -170,7 +172,7 @@ input:-ms-input-placeholder,
     padding-left:15px;
 }
 
-.form--sign-in .label--checkbox {line-height:40px;}
+.form--sign-in .label--checkbox {}
 .form--sign-in .label--checkbox::before {
     top:0px;
 }
@@ -236,7 +238,7 @@ input:-ms-input-placeholder,
 .tel{background: url("../img/phone_icon.png") top left no-repeat, linear-gradient(#f6f6f6, #f0f0f0);}
 
 /* ~~ Responsive ~~ */
-@media all and (max-width: 510px) {
+@media all and (max-width: 599px) {
     h2{
         font-size:26px;
     }
@@ -259,7 +261,7 @@ input:-ms-input-placeholder,
         font-size:13px;
     }
     .label--checkbox__span{
-        padding-left:10px; 
+        padding-left:10px;
     }
     .submit{
         font-size:17px;
@@ -276,11 +278,17 @@ input:-ms-input-placeholder,
         font-size:14px;
     }
     .checkbox:checked + .label--checkbox::after{
-        top:3px;
+        top:6px;
+    }
+    .form--sign-in .label--checkbox::before {
+        top:0px;
+    }
+    .form--sign-in .checkbox:checked + .label--checkbox::after{
+        top: 6px;
     }
 
 }
-@media all  and (min-width: 510px) and (max-width: 1200px){
+@media all  and (min-width: 599px) and (max-width: 1280px){
     .main {width: 500px;
         flex-direction: column;
     }
