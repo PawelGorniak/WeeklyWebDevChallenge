@@ -224,12 +224,15 @@ input:-ms-input-placeholder,
 .submit--discard{
     background-image: linear-gradient(#f65e70, #f03747 50%, #f4475b 51%, #ee2031 );  
 }
+.logo-bottom{
+    margin: 50px auto 20px;
+}
 .logo-bottom__img {
     width:355px;
     height:130px;
-    display: block;
-    margin: 50px auto 20px;
+    display: block;    
     opacity:.3;
+    margin:0px auto;
 }
 .text{background: url("../img/username_icon.png") top left no-repeat, linear-gradient(#f6f6f6, #f0f0f0); }
 .password{background: url("../img/password_icon.png") top left no-repeat, linear-gradient(#f6f6f6, #f0f0f0);}
