@@ -62,8 +62,7 @@ body {
 /* ~~ MAIN ~~ */
 .main {
     width:1000px;
-    margin:0px auto;
-    margin-top:13px;
+    margin:13px auto;
     display:flex;
     justify-content: space-around;    
 }
