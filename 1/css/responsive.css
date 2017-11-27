@@ -1,0 +1,10 @@
+@media all and (max-width: 1200px){
+    .main{
+        width: 100%;
+        flex-direction: column;
+        align-items:center;
+    }
+    .main__column{
+        width:500px;
+    }
+}

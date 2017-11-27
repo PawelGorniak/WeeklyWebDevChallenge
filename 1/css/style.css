@@ -181,15 +181,15 @@ input:-ms-input-placeholder,
     font-size: 24px;
     color: #fff;
     text-shadow: 1px 1px 0px #51850e;
-    background: linear-gradient(#a3d740, #7fc41f);
-    background-size: 200% auto;
-    background-position: 0 100%;
     cursor: pointer;
-    transition: background-position ease 0.5s;
+    background-image: linear-gradient(#a3d740, #7fc41f 50%,#98d22c 51%, #72b01b);    
+    background-size: auto 200%;
+    /* transition: background-position ease 0;*/
 }
 
+
 .submit:hover:enabled{
-    background-position: 0 0;
+    background-position: 100% 100%;
     /* background: linear-gradient(#98d22c, #72b01b); */
 }
 
@@ -215,11 +215,7 @@ input:-ms-input-placeholder,
     float:right;
 }
 .submit--discard{
-    background: linear-gradient(#f65e70, #f03747);  
-    transition: background-position ease 0.5s;  
-}
-.submit--discard:hover:enabled{
-    background: linear-gradient(hsl(353, 89%, 62%), hsl(355, 86%, 53%));  
+    background-image: linear-gradient(#f65e70, #f03747 50%, #f4475b 51%, #ee2031 );  
 }
 .logo-bottom__img {
     width:355px;
@@ -233,3 +229,56 @@ input:-ms-input-placeholder,
 .email{background: url("../img/email_icon.png") top left no-repeat, linear-gradient(#f6f6f6, #f0f0f0);}
 .select{background: url("../img/location_icon.png") top left no-repeat, url("../img/select_arrow.png") right 12px center no-repeat, linear-gradient(#f6f6f6, #f0f0f0);}
 .tel{background: url("../img/phone_icon.png") top left no-repeat, linear-gradient(#f6f6f6, #f0f0f0);}
+
+/* ~~ Responsive ~~ */
+@media all and (max-width: 510px) {
+    h2{
+        font-size:26px;
+    }
+    .main{
+        width:100%;
+        flex-direction: column;
+    }
+    .main__column{
+        padding:0px 5px;
+    }
+    .form-container {
+        padding:10px;
+    }
+
+    .header__logo, .logo-bottom__img{
+        width:70%;
+        height:70%;
+    }
+    .label--checkbox{
+        font-size:13px;
+    }
+    .label--checkbox__span{
+        padding-left:10px; 
+    }
+    .submit{
+        font-size:17px;
+    }
+    .text{background: linear-gradient(#f6f6f6, #f0f0f0); }
+    .password{background: linear-gradient(#f6f6f6, #f0f0f0);}
+    .email{ background:linear-gradient(#f6f6f6, #f0f0f0);}
+    .select{background:  url("../img/select_arrow.png") right 12px center no-repeat, linear-gradient(#f6f6f6, #f0f0f0);}
+    .tel{background: linear-gradient(#f6f6f6, #f0f0f0);}
+    
+    .text, .password, .email, .tel, .select, .textarea {
+        padding-left: 15px;
+        font-weight:200;
+        font-size:14px;
+    }
+    .checkbox:checked + .label--checkbox::after{
+        top:3px;
+    }
+
+}
+@media all  and (min-width: 510px) and (max-width: 1200px){
+    .main {width: 500px;
+        flex-direction: column;
+    }
+
+}
+
