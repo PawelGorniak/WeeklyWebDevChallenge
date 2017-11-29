@@ -222,6 +222,7 @@ input:-ms-input-placeholder,
 }
 .submit--discard{
     background-image: linear-gradient(#f65e70, #f03747 50%, #f4475b 51%, #ee2031 );  
+    border-color: hsl(355, 86%, 38%);
 }
 .logo-bottom{
     margin: 50px auto 20px;
