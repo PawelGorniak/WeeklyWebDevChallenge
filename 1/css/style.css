@@ -112,6 +112,12 @@ h2 {
   text-align: center;
   margin: 40px 0px 20px; }
 
+.element-invisible {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px); }
+
 /* ~~ LAYOUT ~~ */
 html,
 body {
@@ -175,28 +181,33 @@ body {
   color: #a3a3a3;
   transition: border-color ease 0.3s; }
 
+.select {
+  color: #c9c9c9; }
+  .select:focus {
+    color: #a3a3a3; }
+
 input:focus, .select:focus, .textarea:focus {
   border-color: #a3a3a3;
   outline: none; }
 
 input::-webkit-input-placeholder,
 .textarea::-webkit-input-placeholder {
-  color: #afafaf;
+  color: #c9c9c9;
   opacity: 1; }
 
 input:-moz-placeholder,
 .textarea:-moz-placeholder {
-  color: #afafaf;
+  color: #c9c9c9;
   opacity: 1; }
 
 input::-moz-placeholder,
 .textarea::-moz-placeholder {
-  color: #afafaf;
+  color: #c9c9c9;
   opacity: 1; }
 
 input:-ms-input-placeholder,
 .textarea:-ms-input-placeholder {
-  color: #afafaf;
+  color: #c9c9c9;
   opacity: 1; }
 
 .select {
@@ -214,14 +225,14 @@ input:-ms-input-placeholder,
 .label--checkbox {
   font-size: 16px;
   font-weight: 200;
-  color: #afafaf;
+  color: #c9c9c9;
   position: relative;
   cursor: pointer;
   line-height: 25px; }
   .label--checkbox::before {
     content: "";
     display: inline-block;
-    border: 1px solid #afafaf;
+    border: 1px solid #c9c9c9;
     border-radius: 3px;
     height: 24px;
     width: 24px;
@@ -368,5 +379,11 @@ input:-ms-input-placeholder,
   .main {
     width: 500px;
     flex-direction: column; } }
+.test {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  color: #fff;
+  font-weight: 20px; }
 
 /*# sourceMappingURL=style.css.map */

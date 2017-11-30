@@ -1,5 +1,5 @@
 // VARIABLE //
-$textColor: #afafaf;
+$textColor: hsl(0, 0%, 79%);
 /* ~~ RESET ~~ */
 @import 'reset', 'fonts';
 
@@ -20,6 +20,12 @@ h2 {
     text-align: center;
     margin: 40px 0px 20px;
 }
+
+.element-invisible {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+  }
 
 /* ~~ LAYOUT ~~ */
 html,
@@ -95,6 +101,12 @@ body {
     padding-left: 80px;
     color:#a3a3a3;   
     transition: border-color ease 0.3s;    
+}
+.select{
+    color: $textColor;
+    &:focus{
+        color:#a3a3a3; 
+    }
 }
 
 input:focus, .select:focus, .textarea:focus{
@@ -298,4 +310,13 @@ input:-ms-input-placeholder,
     }
 
 }
+
+.test{
+    width:200px;
+    height:200px;
+    background-color:red;
+    color:#fff;
+    font-weight:20px;
+}
+
 
